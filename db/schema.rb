@@ -13,6 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20160519045652) do
 
+  create_table "profiles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "cname"
+    t.string   "addr"
+    t.string   "mob"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+
   create_table "advertisements", force: :cascade do |t|
     t.integer  "profile_id"
     t.string   "name"
@@ -29,14 +39,6 @@ ActiveRecord::Schema.define(version: 20160519045652) do
 
   add_index "advertisements", ["profile_id"], name: "index_advertisements_on_profile_id"
 
-  create_table "profiles", force: :cascade do |t|
-    t.string   "name"
-    t.string   "cname"
-    t.string   "addr"
-    t.string   "mob"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
