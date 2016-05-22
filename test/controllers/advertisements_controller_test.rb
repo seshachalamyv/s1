@@ -18,7 +18,7 @@ class AdvertisementsControllerTest < ActionController::TestCase
 
   test "should create advertisement" do
     assert_difference('Advertisement.count') do
-      post :create, advertisement: { acost: @advertisement.acost, active: @advertisement.active, atype: @advertisement.atype, balance: @advertisement.balance, bcost: @advertisement.bcost, cost: @advertisement.cost, date: @advertisement.date, name: @advertisement.name, profile_id: @advertisement.profile_id }
+      post :create, advertisement: { acost: @advertisement.acost, active: @advertisement.active, atype: @advertisement.atype, balance: @advertisement.balance, bcost: @advertisement.bcost, cost: @advertisement.cost, date: @advertisement.date, due: @advertisement.due, howmany: @advertisement.howmany, name: @advertisement.name, profile_id: @advertisement.profile_id }
     end
 
     assert_redirected_to advertisement_path(assigns(:advertisement))
@@ -35,7 +35,7 @@ class AdvertisementsControllerTest < ActionController::TestCase
   end
 
   test "should update advertisement" do
-    patch :update, id: @advertisement, advertisement: { acost: @advertisement.acost, active: @advertisement.active, atype: @advertisement.atype, balance: @advertisement.balance, bcost: @advertisement.bcost, cost: @advertisement.cost, date: @advertisement.date, name: @advertisement.name, profile_id: @advertisement.profile_id }
+    patch :update, id: @advertisement, advertisement: { acost: @advertisement.acost, active: @advertisement.active, atype: @advertisement.atype, balance: @advertisement.balance, bcost: @advertisement.bcost, cost: @advertisement.cost, date: @advertisement.date, due: @advertisement.due, howmany: @advertisement.howmany, name: @advertisement.name, profile_id: @advertisement.profile_id }
     assert_redirected_to advertisement_path(assigns(:advertisement))
   end
 

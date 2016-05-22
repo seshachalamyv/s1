@@ -9,7 +9,9 @@ one:
   bcost: 1
   active: false
   balance: false
-  date: 2016-05-19
+  date: 2016-05-22
+  due: MyString
+  howmany: MyString
 
 two:
   profile_id: 
@@ -20,4 +22,6 @@ two:
   bcost: 1
   active: false
   balance: false
-  date: 2016-05-19
+  date: 2016-05-22
+  due: MyString
+  howmany: MyString

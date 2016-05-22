@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :profiles
   resources :advertisements
+  resources :profiles
   get 'ad/home'
 
   devise_for :users
